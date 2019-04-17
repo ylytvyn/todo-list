@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Todo App</title>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
-  </head>
-  <body>
-    <div class="container">
-      <p>
-        <label for="new-task">Add Item</label>
-        <input id="new-task" type="text">
-        <button id="add-task">Add</button>
-      </p>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ToDo List</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<form class="container" action="#">
+		<h1>Simple <span>ToDo List</span></h1>
+		<div class="task-add">
+			<h2 class="title">Task Description</h2>
+			<div class="wrap">
+				<input type="text" name="add" placeholder="Add a new task..." class="field-add">
+				<button type="button" class="btn-add">Add Task</button>
+			</div>
+		</div>
+		<div class="task-todo">
+			<h2 class="title">ToDo Items</h2>
+			<ul class="todo-list"></ul>
+		</div>
+		<div class="task-completed">
+			<h2 class="title">Completed Items</h2>
+			<ul class="completed-list"></ul>
+		</div>
+	</form>
 
-      <h3>Todo</h3>
-      <ul id="incomplete-tasks"></ul>
-
-      <h3>Completed</h3>
-      <ul id="completed-tasks"></ul>
-    </div>
-
-    <script type="text/javascript" src="js/app.js"></script>
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-  </body>
+	<script src="js/main.js"></script>
+	<!-- LiveReload Script -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
 </html>
